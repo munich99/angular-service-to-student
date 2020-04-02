@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InteractionService } from'./../interaction.service';
 
 @Component({
   selector: 'app-student',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _InteractionService:InteractionService ) { }  
 
   ngOnInit() {
+    this._InteractionService.teacherMessage$
+    .subscribe(message =>{
+      if(message == 'Good Morning') console.log("ok");
+    });
   }
 
 }

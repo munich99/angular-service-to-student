@@ -11,7 +11,7 @@ export class AppComponent  {
   constructor(private _InteractionService:InteractionService){  }
   name = 'Angular';
 
-  greetStudent(){
+  greetStudent(){    
     this._InteractionService.sendMessage('Good Morning');
   }
     appreciateStudent(){
