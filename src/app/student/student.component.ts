@@ -8,12 +8,14 @@ import { InteractionService } from'./../interaction.service';
 })
 export class StudentComponent implements OnInit {
 
+  stundents:string;
+
   constructor(private _InteractionService:InteractionService ) { }  
 
   ngOnInit() {
     this._InteractionService.teacherMessage$
     .subscribe(message =>{
-      if(message == 'Good Morning') console.log("ok");
+      if(message == 'Good Morning') this.stundents = "ok";
     });
   }
 

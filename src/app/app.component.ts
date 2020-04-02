@@ -9,9 +9,11 @@ import { InteractionService } from'./interaction.service';
 export class AppComponent  {
 
   constructor(private _InteractionService:InteractionService){  }
-  name = 'Angular';
+
+  name = 'Hello Angular';
 
   greetStudent(){    
+    this.name= 'Good Morning Students';
     this._InteractionService.sendMessage('Good Morning');
   }
     appreciateStudent(){
