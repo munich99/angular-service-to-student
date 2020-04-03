@@ -15,7 +15,7 @@ export class StudentComponent implements OnInit {
   ngOnInit() {
     this._InteractionService.teacherMessage$
     .subscribe(message =>{
-      if(message == 'Good Morning') this.stundents = "ok";
+      if(message == 'Good Morning') this.stundents = "goog morning teacher";
     });
   }
 
